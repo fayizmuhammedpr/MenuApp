@@ -7,9 +7,9 @@ const PORT = process.env.PORT || 5000;
 const corsOptions = {
     origin: function(origin,callback){
       const allowedOrigins = [
-    'https://deepnetsoft-activity-frontend.onrender.com',
-    'http://localhost:5173',    
-];
+        'http://localhost:5173',
+        process.env.CLIENT_URL,
+      ].filter(Boolean);
 
       if(!origin || allowedOrigins.includes(origin)){
         callback(null,true)

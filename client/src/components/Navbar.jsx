@@ -9,9 +9,7 @@ function Navbar() {
       <div className="logo-container">
         <img src="/images/Logo.png" alt="logo" className="logo-image" />
         <div className="logo-text">
-          Deep <span className="net">Net</span>
-          <br />
-          <span className="soft">Soft</span>
+          MENU
         </div>
       </div>
 
