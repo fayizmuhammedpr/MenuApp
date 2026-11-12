@@ -3,6 +3,7 @@ const app = express()
 require('dotenv').config()
 const cors = require('cors')
 app.use(express.json())
+const PORT = process.env.PORT || 5000;
 const corsOptions = {
     origin: function(origin,callback){
       const allowedOrigins = [
@@ -38,6 +39,7 @@ const menuItemRoutes = require('./routes/menuItemRoutes')
 app.use('/',menuRoutes)
 app.use('/menuItem',menuItemRoutes)
 
-app.listen(process.env.PORT,() =>{
-    console.log("Server is running on port 5000");    
-})
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
